@@ -1,4 +1,5 @@
 Die bob = new Die(20,20);
+
 void setup()
 {
   size(400,400);
@@ -8,6 +9,7 @@ void draw()
 {
   bob.roll();
  bob.show(); 
+ 
   //your code here
 }
 void mousePressed()
@@ -16,11 +18,13 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {  
-
+int diceX, diceY;
 int RandNum;
    //variable declarations here
   Die(int x, int y) //constructor
   {
+    diceX = x;
+    diceY = y;
     //variable initializations here
   }
   void roll()
@@ -30,29 +34,44 @@ int RandNum;
   void show()
   {
  
-    rect(0,0,40,40);
+    rect(diceX-20,0,40,40);
 
     if(RandNum == 1){
       
-      ellipse(20,20,5,5);
+      ellipse(diceX,20,5,5);
     }
     if(RandNum == 2){
       
-      ellipse(10,10,5,5);
-      ellipse(30,30,5,5);
+      ellipse(diceX-10,10,5,5);
+      ellipse(diceX+10,30,5,5);
     }
         if(RandNum == 3){
       
-      ellipse(10,10,5,5);
-      ellipse(30,30,5,5);
-       ellipse(20,20,5,5);
+      ellipse(diceX-10,10,5,5);
+      ellipse(diceX+10,30,5,5);
+       ellipse(diceX,20,5,5);
     }
      if(RandNum == 4){
-       ellipse(30,30,5,5);
-       ellipse(10,10,5,5);
+       ellipse(diceX+10,30,5,5);
+       ellipse(diceX-10,10,5,5);
       
-      ellipse(30,10,5,5);
-       ellipse(10,30,5,5);
+      ellipse(diceX+10,10,5,5);
+       ellipse(diceX-10,30,5,5);
+    }
+     if(RandNum == 5){
+       ellipse(diceX+10,30,5,5);
+       ellipse(diceX-10,10,5,5);
+      ellipse(diceX,20,5,5);
+      ellipse(diceX+10,10,5,5);
+       ellipse(diceX-10,30,5,5);
+    }
+     if(RandNum == 6){
+       ellipse(diceX+10,30,5,5);
+       ellipse(diceX-10,10,5,5);
+      ellipse(diceX-10,20,5,5);
+        ellipse(diceX+10,20,5,5);
+      ellipse(diceX+10,10,5,5);
+       ellipse(diceX-10,30,5,5);
     }
   }
 }
