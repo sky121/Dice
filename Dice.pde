@@ -1,4 +1,3 @@
-Die bob = new Die(20,20);
 
 void setup()
 {
@@ -7,8 +6,15 @@ void setup()
 }
 void draw()
 {
-  bob.roll();
- bob.show(); 
+  for(int i = 20; i<400; i= i + 41){
+    for(int i2 = 20; i2<400; i2= i2+41){
+      Die bob = new Die(i2,i);
+      bob.roll();
+      bob.show(); 
+    }
+}
+
+
  
   //your code here
 }
