@@ -1,4 +1,4 @@
-
+int sum = 0;
 void setup()
 {
   size(490,500);
@@ -6,21 +6,24 @@ void setup()
 }
 void draw()
 {
-  for(int i = 20; i<400; i= i + 41){
-    for(int i2 = 20; i2<501; i2= i2+41){
+  background(140,102,459);
+  for(int i = 20; i<400; i= i + 50){
+    for(int i2 = 20; i2<501; i2= i2+50){
       Die bob = new Die(i2,i);
       bob.roll();
-      bob.show(); 
+      bob.show();
+      sum = sum+bob.RandNum;
     }
 }
 
 
- 
+ text(sum, 450,450);
   //your code here
 }
 void mousePressed()
 {
   redraw();
+  sum=0;
 }
 class Die //models one single dice cube
 {  
