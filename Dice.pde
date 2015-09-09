@@ -42,9 +42,9 @@ int RandNum;
   }
   void show()
   {
- 
+ fill((int)(Math.random()*225+30),(int)(Math.random()*225+30),(int)(Math.random()*225+30));
     rect(diceX-20,diceY-20,40,40);
-
+fill(0,0,0);
     if(RandNum == 1){
       
       ellipse(diceX,diceY,5,5);
