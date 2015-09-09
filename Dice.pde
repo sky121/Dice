@@ -1,7 +1,7 @@
 
 void setup()
 {
-  size(400,400);
+  size(500,500);
   noLoop();
 }
 void draw()
@@ -40,44 +40,44 @@ int RandNum;
   void show()
   {
  
-    rect(diceX-20,0,40,40);
+    rect(diceX-20,diceY-20,40,40);
 
     if(RandNum == 1){
       
-      ellipse(diceX,20,5,5);
+      ellipse(diceX,diceY,5,5);
     }
     if(RandNum == 2){
       
-      ellipse(diceX-10,10,5,5);
-      ellipse(diceX+10,30,5,5);
+      ellipse(diceX-10,diceY-10,5,5);
+      ellipse(diceX+10,diceY+10,5,5);
     }
         if(RandNum == 3){
       
-      ellipse(diceX-10,10,5,5);
-      ellipse(diceX+10,30,5,5);
-       ellipse(diceX,20,5,5);
+      ellipse(diceX-10,diceY-10,5,5);
+      ellipse(diceX+10,diceY+10,5,5);
+       ellipse(diceX,diceY,5,5);
     }
      if(RandNum == 4){
-       ellipse(diceX+10,30,5,5);
-       ellipse(diceX-10,10,5,5);
+       ellipse(diceX+10,diceY+10,5,5);
+       ellipse(diceX-10,diceY-10,5,5);
       
-      ellipse(diceX+10,10,5,5);
-       ellipse(diceX-10,30,5,5);
+      ellipse(diceX+10,diceY-10,5,5);
+       ellipse(diceX-10,diceY+10,5,5);
     }
      if(RandNum == 5){
-       ellipse(diceX+10,30,5,5);
-       ellipse(diceX-10,10,5,5);
-      ellipse(diceX,20,5,5);
-      ellipse(diceX+10,10,5,5);
-       ellipse(diceX-10,30,5,5);
+       ellipse(diceX+10,diceY+10,5,5);
+       ellipse(diceX-10,diceY-10,5,5);
+      ellipse(diceX,diceY,5,5);
+      ellipse(diceX+10,diceY-10,5,5);
+       ellipse(diceX-10,diceY+10,5,5);
     }
      if(RandNum == 6){
-       ellipse(diceX+10,30,5,5);
-       ellipse(diceX-10,10,5,5);
-      ellipse(diceX-10,20,5,5);
-        ellipse(diceX+10,20,5,5);
-      ellipse(diceX+10,10,5,5);
-       ellipse(diceX-10,30,5,5);
+       ellipse(diceX+10,diceY+10,5,5);
+       ellipse(diceX-10,diceY-10,5,5);
+      ellipse(diceX-10,diceY,5,5);
+        ellipse(diceX+10,diceY,5,5);
+      ellipse(diceX+10,diceY-10,5,5);
+       ellipse(diceX-10,diceY+10,5,5);
     }
   }
 }
