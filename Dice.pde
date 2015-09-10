@@ -1,4 +1,5 @@
 int sum = 0;
+int click = 0;
 void setup()
 {
   size(490,500);
@@ -18,10 +19,12 @@ void draw()
 
 
  text(sum, 450,450);
+  text(click, 200,450);
   //your code here
 }
 void mousePressed()
 {
+click = click +1;
   redraw();
   sum=0;
 }
