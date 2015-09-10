@@ -18,8 +18,8 @@ void draw()
 }
 
 
- text(sum, 450,450);
-  text(click, 200,450);
+ text("sum: "+sum, 450,450);
+  text("number of clicks: "+click, 200,450);
   //your code here
 }
 void mousePressed()
